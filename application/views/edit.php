@@ -16,12 +16,16 @@
     	<div class="row">
 
   	<div class="col-md-4">
+    <?php
+      foreach($data_buku as $row){
+      echo form_open('C_buku/edit');
+    ?>
 
 
     <form>
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
-        <input type="text" class="form-control" value="<?php echo ($row->judul);?>" >
+        <input type="text" class="form-control" value="<?php echo $row->judul ?>" >
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group">
